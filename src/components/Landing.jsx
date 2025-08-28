@@ -34,7 +34,7 @@ function Landing({ handleSearch, searchFor, setSearchFor }) {
           <p className="text-[14px] w-[100%] lg:w-[410px] font-medium drop-shadow-2xl sm:text-2xl md:text-1xl lg:text-2xl">
             Track ratings, reviews, cast, and more — powered by TMDB.
           </p>
-          <span className="w-[100%] md:w-[410px] sm:w-[410px] lg:w-[410px] h-[50px] mt-[29px] border rounded-[25px] flex justify-between items-center pl-[5px] pr-[7px]">
+          <span className="w-[100%] md:w-[410px] sm:w-[410px] lg:w-[410px] h-[50px] mt-[29px] border rounded-[25px] flex justify-between items-center pl-[5px] pr-[7px] gap-[3px]">
             <input
               id="search"
               type="text"
@@ -83,14 +83,14 @@ function Landing({ handleSearch, searchFor, setSearchFor }) {
       </div>
       <div className="w-full h-full text-white">
         <p className="font-semibold text-[32px]">Top Shows Today</p>
-        <div className="flex w-full justify-between mt-[36px] md:overflow-hidden mb-[20px] overflow-y-auto">
+        <div className="flex w-full justify-between mt-[36px] lg:overflow-hidden mb-[20px] overflow-y-auto">
           {shows.map((show) => (
             <Link key={show.id} to={`/tv/${show.id}`}>
               <div className="w-[217px] group">
                 <img
                   src={`https://image.tmdb.org/t/p/w500${show.poster_path}`}
                   alt={show.name}
-                  className="w-[70%] h-[70%] md:w-[100%] md:h-[290px] rounded-[10px] object-cover 
+                  className="w-[70%] h-[70%] lg:w-[100%] lg:h-[290px] rounded-[10px] object-cover 
                              md:hover:brightness-50 ease-in-out transition-[height] duration-500 
                              hover:h-[215px]"
                 />

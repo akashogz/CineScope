@@ -14,7 +14,7 @@ function Navbar(){
                     <Link to={'/about'}><p className="hover:underline hover:underline-offset-5 cursor-pointer">About</p></Link>
                 </div>
             </div>
-            <div className="hidden md:flex gap-[31px]">
+            <div className="hidden lg:flex gap-[31px]">
                 <button className="w-[114px] h-[35px] border rounded-full text-white hover:bg-fuchsia-900 transition duration-500 hover:border-0 cursor-pointer">Sign Up</button>
                 <button className="w-[115px] h-[36px] rounded-full text-black bg-white hover:bg-fuchsia-900 hover:text-white transition duration-500 cursor-pointer">Sign In</button>
             </div>

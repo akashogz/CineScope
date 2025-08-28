@@ -1,6 +1,6 @@
 function Footer(){
     return(
-        <div className="flex items-center text-white flex-col w-full gap-[40px] pb-[30px] lg:text-[20px] mt-[40px] overscroll-none overflow-y-none">
+        <div className="flex items-center text-white flex-col w-full gap-[40px] pb-[30px] lg:text-[20px] mt-[40px]">
             <div className="flex gap-[16%] lg:gap-[290px] w-full px-[10%] items-center justify-center">
                 <p className="hover:underline hover:underline-offset-5 cursor-pointer">About</p>
                 <p className="hover:underline hover:underline-offset-5 cursor-pointer">Privacy Policy</p>

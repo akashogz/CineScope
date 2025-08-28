@@ -41,8 +41,9 @@ function TVdetails() {
 
   return(
     <>
-    <div className="hidden px-[44px] mb-[40px] lg:flex gap-[20px] text-white">
-      <div className="flex flex-col gap-[19px]">
+    <div className="hidden px-[44px] mb-[40px] lg:flex gap-[20px] text-white flex-col">
+      <div className="flex gap-[20px]">
+        <div className="flex flex-col gap-[19px]">
         <div className="w-[475px] h-[440px] flex items-center justify-center bg-gradient-to-r from-[rgba(63,63,63,0.24)] to-[#45454538] bg-opacity-5 backdrop-blur-[10px] drop-shadow-2xl rounded-[20px]">
           <img
             src={`https://image.tmdb.org/t/p/w500${show.poster_path}`}
@@ -96,6 +97,27 @@ function TVdetails() {
           </div>
         </div>
       </div>
+      </div>
+      <h2 className="text-2xl font-bold mt-[20px] mb-[10px]">Cast</h2>
+        <div className="flex justify-between overflow-y-none gap-3">
+          {show.cast?.slice(0, 10).map((actor) => (
+            <div key={actor.id} className="flex flex-col items-center justify-start w-[full]">
+              <img
+                src={
+                  actor.profile_path
+                    ? `https://image.tmdb.org/t/p/w200${actor.profile_path}`
+                    : "/placeholder.png"
+                }
+                alt={actor.name}
+                className="w-[5rem] h-[5rem] rounded-full object-cover"
+              />
+              <p className="font-semibold text-center">{actor.name}</p>
+              <span className="text-gray-500 text-[14px] truncate w-[100px] text-center">{actor.character}</span>
+            </div> 
+          ))}
+          
+         <div className="h-[20px]"></div>
+        </div>
     </div>
     <div className="flex flex-col gap-[20px] lg:hidden">
       <div className="flex items-center justify-center flex-col gap-[10px] px-[5%]">
@@ -137,7 +159,7 @@ function TVdetails() {
       </div>
       <div className="mx-[5%]">
         <h2 className="text-2xl font-bold mt-[20px] mb-[10px]">Cast</h2>
-        <div className="flex justify-between overflow-y-scroll">
+        <div className="flex justify-between overflow-y-scroll gap-2">
           {show.cast?.slice(0, 10).map((actor) => (
             <div key={actor.id} className="flex flex-col items-center justify-start w-[full]">
               <img
